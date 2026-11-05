@@ -1,15 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "edu.iesam.marvel"
+    namespace = "edu.iesam.json"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "edu.iesam.marvel"
+        applicationId = "edu.iesam.json"
         minSdk = 26
         targetSdk = 37
         versionCode = 1
@@ -38,6 +39,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    implementation(libs.gson)
+    implementation(libs.kSerialization)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
